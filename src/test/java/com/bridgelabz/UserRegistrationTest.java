@@ -14,7 +14,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateFirstName("KVV");
+        boolean result = userRegistration.validateFirstName("CMD");
 
         Assert.assertTrue(result);
     }
@@ -24,7 +24,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateFirstName("KVV");
+        boolean result = userRegistration.validateFirstName("CMD");
 
         Assert.assertFalse(result);
 
@@ -38,7 +38,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateSecondName("VISHNU");
+        boolean result = userRegistration.validateSecondName("shakeeel");
 
         Assert.assertTrue(result);
     }
@@ -48,7 +48,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateSecondName("VISHNU");
+        boolean result = userRegistration.validateSecondName("Shakeel");
 
         Assert.assertFalse(result);
 
@@ -58,10 +58,10 @@ public class UserRegistrationTest {
    for True test
    */
     @Test
-    public void givenInValidEmail_ShouldReturnTrue_Test() {
+    public void givenValidEmail_ShouldReturnTrue_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateEmail("XYZ860@gmail.com");
+        boolean result = userRegistration.validateEmail("cmdshakeel21@gmail.com");
 
         Assert.assertTrue(result);
     }
@@ -70,8 +70,48 @@ public class UserRegistrationTest {
     public void givenInValidEmail_ShouldReturnFalse_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateEmail("XYZ@gmail.com");
+        boolean result = userRegistration.validateEmail("cmdshakeel21gmail.com");
 
+        Assert.assertFalse(result);
+    }
+    /*
+    creating method for PhoneNumber validation
+    for True test
+    */
+    @Test
+    public void givenValidPhoneNumber_ShouldReturnTrue_Test() {
+        UserRegistration userRegistration = new UserRegistration();
+
+        boolean result = userRegistration.validatePhoneNumber("958147738");
+
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenInPhoneNumber_ShouldReturnFalse_Test() {
+        UserRegistration userRegistration = new UserRegistration();
+
+        boolean result = userRegistration.validatePhoneNumber("00 9581477386");
+        Assert.assertFalse(result);
+    }
+    /*
+  creating method for Password validation validation
+  for True test
+  */
+    @Test
+    public void givenValidPassWordvalid_ShouldReturnTrue_Test() {
+        UserRegistration userRegistration = new UserRegistration();
+
+        boolean result = userRegistration.validatePassword("210519988");
+
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenInValidPassWordValid_ShouldReturnFalse_Test() {
+        UserRegistration userRegistration = new UserRegistration();
+
+        boolean result = userRegistration.validatePassword("210519988");
         Assert.assertFalse(result);
     }
 }
