@@ -50,7 +50,7 @@ public class UserRegistration {
          using the pattern for phonenumber pattern validation
         */
 
-    private static final String PASSWORD_VALIDATION = "^.{8,}$";
+    private static final String PASSWORD_VALIDATION =  "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
 
     public boolean validatePassword(String passwordvalid) {
 

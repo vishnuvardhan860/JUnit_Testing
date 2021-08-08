@@ -14,7 +14,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateFirstName("CMD");
+        boolean result = userRegistration.validateFirstName("KVV");
 
         Assert.assertTrue(result);
     }
@@ -24,7 +24,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateFirstName("CMD");
+        boolean result = userRegistration.validateFirstName("KVV");
 
         Assert.assertFalse(result);
 
@@ -38,7 +38,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateSecondName("shakeeel");
+        boolean result = userRegistration.validateSecondName("VISHNU");
 
         Assert.assertTrue(result);
     }
@@ -48,7 +48,7 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateSecondName("Shakeel");
+        boolean result = userRegistration.validateSecondName("VISHNU");
 
         Assert.assertFalse(result);
 
@@ -61,7 +61,7 @@ public class UserRegistrationTest {
     public void givenValidEmail_ShouldReturnTrue_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateEmail("cmdshakeel21@gmail.com");
+        boolean result = userRegistration.validateEmail("XYZ@860@gmail.com");
 
         Assert.assertTrue(result);
     }
@@ -70,7 +70,7 @@ public class UserRegistrationTest {
     public void givenInValidEmail_ShouldReturnFalse_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateEmail("cmdshakeel21gmail.com");
+        boolean result = userRegistration.validateEmail("XYZ860@gmail.com");
 
         Assert.assertFalse(result);
     }
@@ -102,7 +102,7 @@ public class UserRegistrationTest {
     public void givenValidPassWordvalid_ShouldReturnTrue_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validatePassword("210519988");
+        boolean result = userRegistration.validatePassword("DB210519988");
 
         Assert.assertTrue(result);
     }
@@ -114,4 +114,6 @@ public class UserRegistrationTest {
         boolean result = userRegistration.validatePassword("210519988");
         Assert.assertFalse(result);
     }
+
+
 }
