@@ -1,20 +1,16 @@
 package com.bridgelabz;
-
 //importing  junit assert
-
 import org.junit.Assert;
-
 //importing j unit Test
-
 import org.junit.Test;
 
 public class UserRegistrationTest {
 
     @Test
     public void givenValidFirstName_ShouldReturnTrue_Test() {
-
-         //   creating the object of userRegistrstion
-
+        /*
+            creating the object of userRegistrstion
+         */
 
         UserRegistration userRegistration = new UserRegistration();
 
@@ -57,13 +53,15 @@ public class UserRegistrationTest {
         Assert.assertFalse(result);
 
     }
-
-   //creating method for Email validation  for True test
+    /*
+   creating method for Email validation
+   for True test
+   */
     @Test
-    public void givenValidEmail_ShouldReturnTrue_Test() {
+    public void givenInValidEmail_ShouldReturnTrue_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateEmail("vishnu860@gmail.com");
+        boolean result = userRegistration.validateEmail("XYZ860@gmail.com");
 
         Assert.assertTrue(result);
     }
@@ -72,48 +70,8 @@ public class UserRegistrationTest {
     public void givenInValidEmail_ShouldReturnFalse_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateEmail("vishnu860gmail.com");
+        boolean result = userRegistration.validateEmail("XYZ@gmail.com");
 
         Assert.assertFalse(result);
     }
-
-    //creating method for PhoneNumber validation  for True test
-
-    @Test
-    public void givenValidPhoneNumber_ShouldReturnTrue_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-
-        boolean result = userRegistration.validatePhoneNumber("9581864521");
-
-        Assert.assertTrue(result);
-    }
-
-    @Test
-    public void givenInPhoneNumber_ShouldReturnFalse_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-
-        boolean result = userRegistration.validatePhoneNumber("00 253641875");
-        Assert.assertFalse(result);
-    }
-
-   // creating method for Password validation validation  for True test
-
-    @Test
-    public void givenValidPassWordvalid_ShouldReturnTrue_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-
-        boolean result = userRegistration.validatePassword("DBa210519988");
-
-        Assert.assertTrue(result);
-    }
-
-    @Test
-    public void givenInValidPassWordValid_ShouldReturnFalse_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-
-        boolean result = userRegistration.validatePassword("210519988");
-        Assert.assertFalse(result);
-    }
-
-
 }
